@@ -1,0 +1,291 @@
+
+        body {
+            background: linear-gradient(to right, pink, purple);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .navbar {
+            
+            padding: 10px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            margin-top: -9px;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .reviews-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #reviewsList {
+            margin-top: 20px;
+        }
+
+        .add-review-btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .review-count {
+            font-size: 18px;
+            color: purple;
+        }
+
+        .review-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .review-card h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .review-card p {
+            margin: 10px 0;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 24px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            color: black;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .star-rating span {
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+            margin: 0 5px;
+        }
+
+        .star-rating span.selected {
+            color: gold;
+        }
+        .btn-11,
+        .btn-11 *,
+        .btn-11 :after,
+        .btn-11 :before,
+        .btn-11:after,
+        .btn-11:before {
+            border: 0 solid;
+            box-sizing: border-box;
+        }
+        .btn-11 {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: button;
+            background-color: #000;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+                        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 9px;
+            font-weight: 900;
+            line-height: 1.5;
+            margin: 0;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0;
+            text-transform: uppercase;
+        }
+        .btn-11:disabled {
+            cursor: default;
+        }
+        .btn-11:-moz-focusring {
+            outline: auto;
+        }
+        .btn-11 svg {
+            display: block;
+            vertical-align: middle;
+        }
+        .btn-11 [hidden] {
+            display: none;
+        }
+        .btn-11 {
+            border-radius: 99rem;
+            border-width: 2px;
+            overflow: hidden;
+            padding: 0.8rem 3rem;
+            position: relative;
+        }
+        .btn-11 span {
+            mix-blend-mode: difference;
+        }
+        .btn-11:before {
+            -webkit-animation: bg-scroll 3s linear infinite;
+            animation: bg-scroll 3s linear infinite;
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+            background: repeating-linear-gradient(
+                45deg,
+                hsla(0, 0%, 100%, 0.2),
+                hsla(0, 0%, 100%, 0.2) 0.7%,
+                transparent 0,
+                transparent 4%
+            );
+            content: "";
+            display: block;
+            height: 300%;
+            left: -100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: opacity 0.3s, background-color 0.2s;
+            width: 300%;
+        }
+        .btn-11:hover:before {
+            -webkit-animation-play-state: running;
+            animation-play-state: running;
+            opacity: 1;
+        }
+        .btn-11:active:before {
+            background-color: #fff;
+        }
+        @-webkit-keyframes bg-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(33%);
+            }
+        }
+        @keyframes bg-scroll {
+            0% {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(33%);
+            }
+        }
+        .btn-56,
+        .btn-56 *,
+        .btn-56 :after,
+        .btn-56 :before,
+        .btn-56:after,
+        .btn-56:before {
+            border: 0 solid;
+            box-sizing: border-box;
+        }
+        .btn-56 {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-appearance: button;
+            background-color: #000;
+            background-image: none;
+            color: #fff;
+            cursor: pointer;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                        Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+                        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-size: 60%;
+            line-height: 1.5;
+            margin-top: 15px;
+            -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+            padding: 0;
+        }
+        .btn-56:disabled {
+            cursor: default;
+        }
+        .btn-56:-moz-focusring {
+            outline: auto;
+        }
+        .btn-56 svg {
+            display: block;
+            vertical-align: middle;
+        }
+        .btn-56 [hidden] {
+            display: none;
+        }
+        .btn-56 {
+            border: 1px solid;
+            border-radius: 999px;
+            box-sizing: border-box;
+            display: block;
+            font-weight: 900;
+            -webkit-mask-image: none;
+            overflow: hidden;
+            padding: 1.2rem 3rem;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .btn-56:hover {
+            -webkit-animation: pulse 0.5s;
+            animation: pulse 0.5s;
+            box-shadow: 0 0 0 2em transparent;
+        }
+        @-webkit-keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 #fff;
+            }
+        }
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 #fff;
+            }
+        }

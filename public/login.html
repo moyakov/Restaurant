@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divo Divnoe</title>
+    <link type="image/x-icon" href="/images/logo.jpg" rel="shortcut icon">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <img src="/images/logo.jpg" alt="logo" class="logo">
+        <h1>Divo Divnoe</h1>
+    </div>
+    <div class="loginForm">
+        <div class="rectangle1">
+            <div class="login">
+                <div class="rectangle2">
+                    <img src="/images/handshake.png" alt="">
+                </div>
+                <div class="welcome">
+                    <h1>Welcome back</h1>
+                </div>
+                <br>
+                <form id="loginForm">
+                    <div class="logAndPass">
+                        <input type="text" id="username" placeholder="Input your username" required> 
+                        <br><br>
+                        <input type="password" id="password" placeholder="Input your password" required>
+                        <br><br>
+                        <div class="button-container">
+                            <button type="submit" class="nextButt">
+                                <h2>Next</h2>
+                                <img src="/images/next.png" alt="" width="20" height="20">
+                            </button>
+                            <button class="signUp">
+                                <h2>
+                                    <a href="/register" class="hyperl">Sign Up</a>
+                                </h2>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div id="message" style="display: none; margin-top: 20px; padding: 10px; border-radius: 5px;"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value; 
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const result = await response.json();
+
+                const messageDiv = document.getElementById('message');
+                if (result.success) {
+                    localStorage.setItem('username', username);
+                    window.location.href = '/';
+                } else {
+                    messageDiv.style.backgroundColor = '#f8d7da';
+                    messageDiv.style.color = '#721c24';
+                    messageDiv.textContent = result.message || 'Ошибка входа';
+                    messageDiv.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                const messageDiv = document.getElementById('message');
+                messageDiv.style.backgroundColor = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.textContent = 'Ошибка при отправке запроса';
+                messageDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

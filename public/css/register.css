@@ -1,0 +1,148 @@
+body {
+    background: url(../images/bglogin.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.rectangle1 {
+    width: 952px;
+    height: 774px;
+    background-color: #E7D2D2;
+    margin-top: 60px; 
+    border-radius: 62px;
+    position: absolute; 
+    left: 654px; 
+    top: 53px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.rectangle2 {
+    width: 165px;
+    height: 113px;
+    background-color: #D9D9D9;
+    margin-top: -80px;
+    display: flex; 
+    margin-left: 340px;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 70px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.registerForm {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    margin-left: 130px;
+}
+
+.regisAttrib {
+    justify-content: center;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+     
+    
+}
+
+.input-group li {
+    width: 150px; 
+    text-align: center; 
+    margin-left: 25px;
+    margin-right: 90px;
+    list-style-type: none;
+    
+}
+
+#username,
+#email,
+#password,
+#re-pass {
+    width: 600px; 
+    height: 123px; 
+    border-radius: 51px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.regisButt, .logIn {
+    width: 202px;
+    height: 75px;
+    border-radius: 38px;
+    border: none;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.regisButt {
+    background-color: #1F77A8;
+}
+
+.regisButt img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.regisButt h2,
+.logIn h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.logIn {
+    background-color: #6EB1D8;
+}
+
+.logIn img {
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.logIn h2 {
+    text-align: center; 
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hyperl {
+    text-decoration: none;
+    color: #fff;
+}
